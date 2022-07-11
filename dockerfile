@@ -4,6 +4,12 @@ RUN apt install curl -y
 RUN apt install unzip -y
 ADD https://go.dev/dl/go1.18.3.linux-amd64.tar.gz ./go1.18.3.linux-amd64.tar.gz
 RUN tar -xvzf  go1.18.3.linux-amd64.tar.gz
-RUN  mv go /usr/local/
+RUN mv go /usr/local/
 RUN curl https://get.ignite.com/cli! | bash
+RUN export PATH=$PATH:/usr/local/go/bin
+RUN mkdir app
+WORKDIR /app
+RUN ignite scaffold chain hello
+WORKDIR /app/hello
+RUN ignite chain serve
 CMD export PATH=$PATH:/usr/local/go/bin
