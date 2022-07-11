@@ -9,7 +9,5 @@ RUN curl https://get.ignite.com/cli! | bash
 RUN export PATH=$PATH:/usr/local/go/bin
 RUN mkdir app
 WORKDIR /app
-RUN ignite scaffold chain hello
-WORKDIR /app/hello
-RUN ignite chain serve
+
 CMD export PATH=$PATH:/usr/local/go/bin
