@@ -9,5 +9,4 @@ RUN curl https://get.ignite.com/cli! | bash
 RUN export PATH=$PATH:/usr/local/go/bin
 RUN mkdir app
 WORKDIR /app
-
 CMD export PATH=$PATH:/usr/local/go/bin
