@@ -13,7 +13,7 @@ RUN git clone https://github.com/hyperledger-labs/yui-ibc-solidity.git
 RUN  apt install ca-certificates -y 
 RUN apt install curl - 
 RUN apt install gnupg -y 
-RUNapt install lsb-release -y
+RUN apt install lsb-release -y
 RUN apt install docker -y
 RUN apt install docker-compose -y
 CMD export PATH=$PATH:/usr/local/go/bin
