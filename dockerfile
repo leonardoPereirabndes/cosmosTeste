@@ -9,5 +9,5 @@ RUN mv go /usr/local/
 RUN export PATH=$PATH:/usr/local/go/bin
 RUN mkdir app
 WORKDIR /app
-RUN git clone https://github.com/hyperledger-labs/yui-docs.git
+RUN git clone https://github.com/hyperledger-labs/yui-ibc-solidity.git
 CMD export PATH=$PATH:/usr/local/go/bin
