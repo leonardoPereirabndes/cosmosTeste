@@ -16,6 +16,6 @@ RUN apt install gnupg -y
 RUN apt install lsb-release -y
 RUN apt install docker -y
 RUN apt install docker-compose -y
-RUN rm /var/run/docker.sock
+RUN rm ../var/run/docker.sock
 RUN apt install sudo -y
 CMD export PATH=$PATH:/usr/local/go/bin
