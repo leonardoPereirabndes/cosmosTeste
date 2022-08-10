@@ -18,4 +18,5 @@ RUN apt install lsb-release -y
 RUN apt install docker -y
 RUN apt install docker-compose -y
 RUN apt install vim -y
+RUN npm install
 CMD export PATH=$PATH:/usr/local/go/bin
