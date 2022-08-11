@@ -5,7 +5,7 @@ RUN apt install unzip -y
 RUN apt install git -y
 ADD https://go.dev/dl/go1.18.3.linux-amd64.tar.gz ./go1.18.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz
-RUN /usr/local/go/bin/go --help
+RUN ./usr/local/go/bin/go --help
 RUN ln -s /usr/local/go/bin/go go
 RUN mkdir app
 WORKDIR /app
