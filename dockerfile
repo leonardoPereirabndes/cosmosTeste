@@ -5,7 +5,7 @@ RUN apt install unzip -y
 RUN apt install git -y
 ADD https://go.dev/dl/go1.18.3.linux-amd64.tar.gz ./go1.18.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz
-RUN export PATH=$PATH:/usr/local/go/bin
+RUN ln -s /usr/local/go/bin go
 RUN mkdir app
 WORKDIR /app
 RUN git clone https://github.com/hyperledger-labs/yui-ibc-solidity.git
@@ -17,4 +17,3 @@ RUN apt install docker -y
 RUN apt install docker-compose -y
 RUN apt install vim -y
 RUN npm install
-CMD export PATH=$PATH:/usr/local/go/bin
