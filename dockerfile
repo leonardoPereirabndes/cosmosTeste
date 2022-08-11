@@ -10,7 +10,7 @@ RUN mkdir app
 WORKDIR /app
 RUN git clone https://github.com/hyperledger-labs/yui-ibc-solidity.git
 WORKDIR /app/yui-ibc-solidity
-RUN go --help
+RUN /usr/local/go/bin/go --help
 RUN  apt install ca-certificates -y 
 RUN apt install gnupg -y 
 RUN apt install lsb-release -y
