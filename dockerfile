@@ -3,8 +3,8 @@ RUN apt update -y
 RUN apt install curl -y
 RUN apt install unzip -y
 RUN apt install git -y
-RUN npm install --global go
-RUN go --versio
+ADD https://go.dev/dl/go1.18.3.linux-amd64.tar.gz ./go1.18.3.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz
 RUN mkdir app
 WORKDIR /app
 RUN git clone https://github.com/hyperledger-labs/yui-ibc-solidity.git
@@ -16,4 +16,3 @@ RUN apt install docker -y
 RUN apt install docker-compose -y
 RUN apt install vim -y
 RUN npm install
-RUN go install -v ./tests/e2e/...
