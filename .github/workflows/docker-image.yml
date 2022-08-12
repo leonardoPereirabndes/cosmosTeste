@@ -43,3 +43,11 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/cosmos_ambiente:latest
+      -
+        name: Build and push go para o cosmos
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./DockerfileGo
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/cosmos-besu-go:latest
